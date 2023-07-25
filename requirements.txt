@@ -1,0 +1,13 @@
+APScheduler==3.10.1
+boto3==1.26.107
+fastapi==0.95.0
+jose==1.0.0
+pydantic==1.10.7
+PyMySQL==1.0.3
+python-dotenv==0.21.1
+python_dateutil==2.8.2
+pytz==2023.3
+requests==2.28.2
+sentry_sdk==1.19.1
+SQLAlchemy==2.0.9
+uvicorn==0.21.1

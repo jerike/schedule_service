@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-29 13:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: Controller/PaymentController.py:52 Controller/PaymentController.py:803
+#: Controller/PaymentController.py:1088 Controller/PaymentController.py:1221
+
+
+msgid "No Authorization"
+msgstr "您已經被其他裝置登出，請重新登入"
+
+msgid "Package invalid"
+msgstr "無效的銷售方案"
+
+msgid "Point can't use coupon"
+msgstr "使用優惠券無法使用點數付款"
+
+msgid "Coupon invalid"
+msgstr "無效的優惠券"
+
+msgid "Coupon used"
+msgstr "優惠券已使用"
+
+msgid "Coupon has expired"
+msgstr "優惠券已過期"
+
+msgid "This course has stopped booking/waiting"
+msgstr "本課程已停止預約/候補"
+
+msgid "Booked/waiting for this course"
+msgstr "已預約/候補本課程"
+
+msgid "Registration is full"
+msgstr "報名已額滿"
+
+msgid "Waitlist is full"
+msgstr "候補已額滿"
+
+msgid "This package does not enable corporate deductions"
+msgstr "此方案未啟用企業額度扣款"
+
+msgid "Invalid authorized account"
+msgstr "無效的授權帳號"
+
+msgid "Invalid authorization code"
+msgstr "無效的授權碼"
+
+msgid "Insufficient points available"
+msgstr "可用點數不足"
+
+msgid "Failed to create order"
+msgstr "建立訂單失敗"
+
+msgid "The transaction failed, the binding information is incorrect"
+msgstr "交易失敗，綁定資料有誤"
+
+msgid "Payment failed, please try again"
+msgstr "付款失敗，請重新操作"
+
+msgid "Failed to write transaction record"
+msgstr "交易紀錄寫入失敗"
+
+msgid "Transaction failed, please contact customer service"
+msgstr "交易失敗，請聯絡客服"
+
+msgid "Insufficient quota"
+msgstr "額度不足"
+
+msgid "Deduction failed"
+msgstr "扣除額度失敗"
+
+msgid "Transaction failed, please try again"
+msgstr "交易失敗，請重新操作"
+
+msgid "Membership issuance failed, please contact customer service"
+msgstr "會籍發放失敗，請聯絡客服"
+
+msgid "Failed to book a course, please contact customer service"
+msgstr "預約課程失敗，請聯絡客服"
+
+
+msgid "Currently not for sale"
+msgstr "此方案已下架"
+
+
+msgid "Company name is missing"
+msgstr "未填寫公司名稱"
+
+msgid "Tax ID number invalid"
+msgstr "統一編號驗證有誤"
+
+msgid "End of sale"
+msgstr "已結束銷售"
+
+msgid "Not yet on sale"
+msgstr "尚未開始銷售"
+
+msgid "Sold out"
+msgstr "已銷售一空"
+
+msgid "You have reached the purchase limit"
+msgstr "您已達到購買上限"
+
+msgid "No corresponding membership"
+msgstr "沒有對應的會籍"
+
+msgid "Please select point sharer"
+msgstr "請選擇點數分享者"
+
+msgid "No such payment method"
+msgstr "沒有此付款方式"
+
+
+msgid "Purchase complete"
+msgstr "購買完成"
+
+msgid "Please choose location"
+msgstr "請選擇使用館別"
+
+msgid "Over quantity"
+msgstr "超出可選擇上限"
+
+msgid "Available locations are out of range"
+msgstr "可用據點超出可選範圍"
+
+msgid "This transaction cannot be refunded"
+msgstr "此交易無法退款"
+
+
+
