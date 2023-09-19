@@ -25,3 +25,4 @@ class JobLog(Base):
 	job_id=Column('job_id',Integer)
 	msg=Column('msg',Text)
 	execute_time=Column('execute_time',Date)
+

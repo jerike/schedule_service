@@ -11,6 +11,7 @@ phases:
       - IMAGE_TAG=${COMMIT_HASH:=latest}
       - echo Show IMAGE_REPO_NAME...
       - echo $IMAGE_REPO_NAME:latest
+
   build:
     commands:
       - echo Build started on `date`
@@ -25,6 +26,17 @@ phases:
       - docker push $IMAGE_REPO_NAME:$IMAGE_TAG
       - echo Show container name $ECS_CONTAINER
       - echo Writing image definitions file...
-      - printf '[{"name":$ECS_CONTAINER,"imageUri":"%s"}]' $IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"%s","imageUri":"%s"}]' $ECS_CONTAINER $IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
+      - cat imagedefinitions.json
+      - echo '[{"name":"%s","imageUri":"%s"}]'
+      - mv build_yml/taskdef-$ENV.json taskdef.json
+      - mv build_yml/appspec.yaml appspec.yaml
+      - cat taskdef.json
+      - cat appspec.yaml
+      
+      
 artifacts:
-    files: imagedefinitions.json
+  files:
+    - appspec.yaml
+    - taskdef.json
+    - imagedefinitions.json

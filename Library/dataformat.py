@@ -135,18 +135,6 @@ def get_lang(request):
     msgLang.install()
     return setLang
 
-def get_local_msg(lang):
-    fname = 'locale/'+lang+'.json'
-    if os.path.isfile(fname) == False:
-        fname = 'locale/zh.json'
-
-    f = open(fname,)
-
-    # returns JSON object as 
-    # a dictionary
-    data = json.load(f)
-    return data
-    
 
 
 def abort_msg(e):
@@ -179,18 +167,13 @@ def format_timezone(time, tzinfo=None):
 
 def getS3File(folder,filename,ext,AWS_S3_URL='',AWS_S3_BUCKET=''):
     if AWS_S3_URL == '':
-        AWS_S3_URL=os.getenv('AWS_S3_URL','https://s3.ap-east-1.amazonaws.com')
+        AWS_S3_URL=os.getenv('AWS_S3_URL','')
 
     if AWS_S3_BUCKET == '':
-        AWS_S3_BUCKET=os.getenv('AWS_S3_BUCKET','xare-sports')
+        AWS_S3_BUCKET=os.getenv('AWS_S3_BUCKET','')
 
 
     return AWS_S3_URL+"/"+AWS_S3_BUCKET+"/"+folder+"/"+filename+"."+ext
-
-
-
-
-
 
 
 def id_rand():

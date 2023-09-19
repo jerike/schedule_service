@@ -1,7 +1,8 @@
-from fastapi import FastAPI,Request,Header,APIRouter, Depends, HTTPException
+from fastapi import FastAPI,Request,Header,Form,APIRouter, Depends, HTTPException
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
+from typing import Optional
 from pytz import utc
 import datetime
 import json
@@ -14,6 +15,8 @@ app = FastAPI()
 
 
 scheduled_jobs_map = {}
+
+
 
 def RunTest():
 	print('test')
@@ -93,7 +96,8 @@ def execute_job(job):
 		result = requests.delete(job['api_path'],allow_redirects=False,timeout=10)
 		saveJobLog(job,result.text)
 	elif job['api_method'] == "LOCAL":
-		result = eval(job['api_path']+"()")
+		print(job['api_path'])
+		result = eval(job['api_path'])
 		print(result)
 		saveJobLog(job,result)
 
@@ -112,9 +116,11 @@ def saveJobLog(job,result):
 #####################################################
 # 執行 Schedler
 #####################################################
-scheduler = BackgroundScheduler(timezone="Asia/Taipei")
-scheduler.add_job(lambda: schedule_jobs(scheduler), 'interval', seconds=10, next_run_time=datetime.datetime.now(), id='scheduler-job-id')
-scheduler.start()
+if os.getenv('scheduler_run','Stop') == 'Run':
+	print(os.getenv('scheduler_run'))
+	scheduler = BackgroundScheduler(timezone="Asia/Taipei")
+	scheduler.add_job(lambda: schedule_jobs(scheduler), 'interval', minutes=1, next_run_time=datetime.datetime.now(), id='scheduler-job-id')
+	scheduler.start()
 
 
 if __name__ == '__main__':

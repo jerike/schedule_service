@@ -5,7 +5,7 @@ import logging.handlers
 from logging.handlers import WatchedFileHandler
 import os
 import multiprocessing
-bind = '0.0.0.0:9999'      
+bind = '0.0.0.0:2222'      
 backlog = 512                
 timeout = 120      
 debug = True

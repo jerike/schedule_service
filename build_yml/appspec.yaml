@@ -5,5 +5,5 @@ Resources:
       Properties:
         TaskDefinition: <TASK_DEFINITION>
         LoadBalancerInfo:
-          ContainerName: "${container_name}"
-          ContainerPort: "${container_port}"
+          ContainerName: "prod-schedule-service-container"
+          ContainerPort: 80
